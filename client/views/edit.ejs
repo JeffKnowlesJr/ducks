@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form goes here</h1>
+    <form action="/ducks/<%= duck._id%>/edit" method="post">
+        <p>Name: <input type="text" name="name" value="<%= duck.name %>"></p>
+        <p>
+            Gender:
+            <select name="gender" value="<%= duck.gender %>">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </p>
+        <p>Age: <input type="number" name="age" min="0" value="<%= duck.age %>"></p>
+        <p>Favorite pond: <input type="text" name="favpond" value="<%= duck.favpond %>"></p>
+        <input type="submit" value="edit">
+    </form>
+    <hr>
+</body>
+</html>
